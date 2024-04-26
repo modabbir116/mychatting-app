@@ -9,6 +9,8 @@ export default {
       colors: {
         'btn-color': '#00008B',
         'text-color': '#040720',
+        'link-color': '#F70D1A',
+
       },
       fontFamily: {
         'montserrat': "'Montserrat', sans-serif",
