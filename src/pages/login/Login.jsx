@@ -7,11 +7,9 @@ import googleIcon from '../../assets/images/google.png'
 import Input from '../../componants/Input';
 import CustomBtn from '../../componants/CustomBtn';
 import AuthNavigate from '../../componants/AuthNavigate';
-import loginImg from '../../assets/images/login.jpg'
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
+import loginImg from '../../assets/images/login_img.jpg'
 import Modal from '@mui/material/Modal';
-
+import { ImCross } from "react-icons/im";
 
 
 // forgate modal style start
@@ -32,6 +30,9 @@ const Login = () => {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+  const handleModleClose = ()=>{
+    setOpen(false)
+  }
   // forgate password part end
   return (
     <>
@@ -87,8 +88,9 @@ const Login = () => {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-         <div className='flex flex-col gap-8'>
-           <h2>Find Your Account</h2>
+         <div className='flex flex-col gap-8 relative'>
+         <button className='bg-link-color w-10 h-10 border-0 outline-0 center flex justify-center items-center text-white absolute right-[-15px]  top-[-15px]' onClick={handleModleClose}><ImCross /></button>
+           <h2 className='text-text-color text-xl font-bold font-montserrat capitalize'>Find Your Account</h2>
            <div>
               <Input style="w-full text-text-color text-2xl font-lato placeholder:text-text-color placeholder:font-loto placeholder:text-2xl" name="email" type="email" lebelTxt="Email Adress" variant="outlined" placeholder="Your Email"/>
            </div>
