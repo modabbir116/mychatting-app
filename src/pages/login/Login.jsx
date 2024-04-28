@@ -38,9 +38,9 @@ const Login = () => {
     <>
       <Box>
         <Grid container spacing={0}>
-          <Grid item xs={6}>
+          <Grid item xs={12}>
             <div className="flex w-full h-[100vh] justify-center items-center">
-                <div className='w-[380px]'>
+                <div className='w-[410px] login_main'>
                     <SectionHeading style="text-text-color text-3xl font-bold font-montserrat capitalize " text="Login to your account!"/>
                     <div className='inline-flex justify-center items-center gap-x-2.5 border-2 border-text-color py-4 px-8 mt-10 rounded-md'>
                        <div className='w-6 h-6 overflow-hidden'>
@@ -69,15 +69,8 @@ const Login = () => {
                 </div>
             </div>
           </Grid>
-          <Grid item xs={6}>
-            <div className='login_imgbox'>
-              <div>
-                <Image source={loginImg} alt="not found" className="w-full h-full object-cover"/>
-              </div>
-            </div>
-          </Grid>
         </Grid>
-    </Box>
+      </Box>
 
 
     {/* forgate part start  */}
